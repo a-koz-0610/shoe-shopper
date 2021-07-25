@@ -1,0 +1,58 @@
+#container{
+	margin: 2rem auto;
+	max-width: 90%;
+	min-height:900px;
+	width: 1000px;
+}
+
+.header{
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav {
+	align-items: center;
+	display: flex;
+	justify-content: space-around;
+	width: 250px;
+}
+
+.welcome{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#login{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 2rem auto;
+   	padding: 0;
+}
+
+.items section{
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	max-width: 90%;
+	width: 1000px;
+}
+
+.items section a{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.checkout {
+	display: flex;
+	justify-content: center;
+}
+
+
+
+

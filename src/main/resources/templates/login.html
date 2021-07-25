@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+    <head>
+	<title>Welcome</title>
+	<link rel="stylesheet" type="text/css" href="/css/layout.css"></link>
+	<link rel="stylesheet" type="text/css" href="/css/style.css"></link>
+	<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+    <body>
+    	<main id="container">
+			<header th:replace="layouts/header :: header"></header>
+	    	<section id="login">
+		        <div class="formText" th:if="${param.error}">
+		            Invalid username and password.
+		        </div>
+		        <div class="formText" th:if="${param.logout}">
+		            You have been logged out.
+		        </div>
+		        <form th:action="@{/login}" method="post">
+		            <div><input class="itemNameInput" type="text" placeholder="User Name" name="username"/></div>
+		            <div><input class="itemNameInput" type="password" placeholder="Password" name="password"/></div>
+		            <div><input type="submit" class="submit" value="Sign In"/></div>
+		        </form>
+	        </section>
+		</main>
+	        <footer th:replace="layouts/footer :: footer">&copy; </footer>
+    </body>
+</html>

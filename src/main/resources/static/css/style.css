@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+
+#container{
+	background-color: #EEE;
+	border-radius: 8px;
+	box-shadow: -2px 6px 34px -1px rgba(0,0,0,0.75);
+}
+
+#logo{
+	font-family: 'Lato', sans-serif;
+	padding-left: 1rem;
+}
+
+.header ul{
+	font-family: 'Lato', sans-serif;
+	font-size: 20px;
+	list-style-type: none;
+	padding-right: 1rem;
+}
+
+.nav a{
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+	color: #000;
+	text-decoration: none;
+}
+
+.nav button{
+	border-radius: 8px;
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+    outline:none;
+}
+
+.formText{
+	color: #FFF;
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+}
+
+#shoppingcart{
+	border-radius: 50%;
+	height: 30px;
+}
+
+.welcome{
+	font-size: 15px;
+}
+
+.items{
+	padding-top: 2rem;
+}
+
+.items section{
+	margin: 1rem auto;
+}
+
+.items section:nth-child(even) {
+    background: #CCC;
+} 
+
+.items a{
+	text-decoration: none;
+	font-family: 'Lato', sans-serif;
+	font-size: 1.5rem;
+}
+
+.items p{
+	font-family: 'Lato', sans-serif;
+	font-size: 1.5rem;
+}
+
+#shoeImage{
+	border-radius: 8px;
+	box-shadow: -2px 6px 34px -1px rgba(0,0,0,0.75);
+	height: 400px;
+	width: 500px;
+}
+
+#description{
+	font-family: 'Lato', sans-serif;
+	font-size: 1.1rem;
+	padding-top: 1rem;
+}
+
+.hide{
+	align-items: center;
+	background-color: #150FB3;
+	display:flex;
+	flex-direction: column;
+	border-radius: 12px;
+	box-shadow: -2px 6px 34px -1px rgba(0,0,0,0.75);
+	width: 60%;
+	padding: 30px; 
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: 0;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.show{
+	align-items: center;
+	background-color: #150FB3;
+	display:flex;
+	flex-direction: column;
+	border-radius: 12px;
+	box-shadow: -2px 6px 34px -1px rgba(0,0,0,0.75);
+	width: 60%;
+	padding: 30px; 
+	-webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+#login{
+	background-color: #150FB3;
+	border-radius: 12px;
+	box-shadow: -2px 6px 34px -1px rgba(0,0,0,0.75);
+	width: 60%;
+}
+
+.add{
+	padding: 50px;
+}
+
+.add-item {
+	background-color: #AAA;
+	margin: 6rem;
+}
+
+.add-item section {
+	margin: 2rem;
+}
+
+.pane{
+	font-family: 'Lato', sans-serif;
+	font-size: 18px;
+}
+
+.itemNameInput{
+	border-radius: 8px;
+	box-shadow: -2px 6px 34px -1px rgba(0,0,0,0.75);
+	font-family: 'Lato', sans-serif;
+	font-size: 18px;
+	margin: .25rem;
+	
+}
+
+.itemImageInput{
+	  border: 2px solid gray;
+	  background-color: white;
+	  border-radius: 8px;
+	  box-shadow: -2px 6px 34px -1px rgba(0,0,0,0.75);
+	  color: gray;
+	  padding: 8px 20px;
+	  font-size: 14px;
+	  font-weight: bold;
+}
+
+.submit{
+	border-radius: 8px;
+	box-shadow: -2px 6px 34px -1px rgba(0,0,0,0.75);
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+	padding-left: 1rem;
+	outline:none;
+}
+
+.add{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.add img{
+	width: 25%;
+	height: auto;
+	border-radius: 50%;
+}
+
+.add img:hover{
+	opacity:0.5;
+	transition: .5s;
+}
+
+.add button{
+	background-color: #EEE;
+	border: none;
+	cursor: pointer;
+	margin-top: 1rem;
+	outline:none;
+}
+
+.checkout button {
+	margin: 2rem;
+	outline:none;
+}
+
+
+.footer{
+	padding-top: 4rem;
+}
+
+@media screen and (max-width: 600px){
+  .header{
+  	display: flex;
+  	flex-direction: column;
+  }
+  
+  .nav{
+  	display: flex;
+  	flex-direction: column;
+  }
+  
+  .nav li{
+  	padding: 1rem;
+  }
+  
+  .nav button{
+  	margin: 1rem;
+  }
+  
+}
+

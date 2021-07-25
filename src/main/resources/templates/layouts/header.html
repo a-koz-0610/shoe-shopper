@@ -1,0 +1,17 @@
+<header class="header">
+	<h1 id="logo">Shoe Shopper</h1>
+	<nav>
+		<ul class="nav">
+			<li class="welcome">
+			    Welcome <span sec:authentication="name">Guest Name</span>
+				 <form sec:authorize="isAuthenticated()" id="frmlogout" th:action="@{/logout}" method="post" class="form-inline">
+				    	<a href="javascript:{}" onclick="document.getElementById('frmlogout').submit(); return false;">Logout</a>
+				 </form>
+	 		</li>
+			<button><a href="/products">Home</a></button>
+			<a href="/cart"><img id="shoppingcart" src="/images/shoppingcart.jpg"></img></a>
+         	<button sec:authorize="hasRole('ROLE_ADMIN')" id='button'>Add</button>
+		</ul>
+	</nav>
+</header>
+

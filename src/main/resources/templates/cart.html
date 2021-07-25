@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Cart</title>
+	<link rel="stylesheet" type="text/css" href="/css/layout.css"></link>
+	<link rel="stylesheet" type="text/css" href="/css/style.css"></link>
+	<link rel="stylesheet" type="text/css" href="/css/modal.css"></link>
+</head>
+<body>
+	<main id="container">
+		<header th:replace="layouts/header :: header"></header>
+
+		<h3>Checkout</h3>
+
+  		<div class="items" th:each="cartItem: ${userModel.cartItems}">
+  		 	<ul>
+      			<li><a th:href ="@{/product(id=${cartItem.product.id})}" th:text = "${cartItem.product.productName}"></a>
+      				<form class= "delete" method="Post">
+      					<input name="userId" type="hidden" th:value="${userModel.id}" /> 
+      					<input name="productId" type="hidden" th:value="${cartItem.product.id}"/>
+      					<button id="x"  th:formaction="@{/remove-button}">&times;</button>
+      				</form>
+      			</li>
+    		</ul> 
+  		</div>
+  		
+  		<div class="checkout">
+  		<form class= "delete" method="Post">
+			<button class="submit" th:formaction="@{/delete-all}">Clear</button>
+		</form>
+			<button id="myBtn" class="submit" >Order</button>
+		</div>
+	
+		<div id="myModal" class="modal">
+			<div class="modal-content">
+			    <span class="close">&times;</span>
+			    <form class= "delete" method="Post">
+					<button class="submit" th:formaction="@{/place-order}">Confirm</button>
+				</form>
+			    <p>Thank you for your order!</p>
+			 </div>
+		</div>	
+		
+	
+	</main>
+	<footer th:replace="layouts/footer :: footer">&copy; </footer>
+	<script src = "./js/modal.js"></script>
+</body>
+	
+</html>
+
+
+
+
+  
+ 

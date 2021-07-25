@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Our Items</title>
+	<link rel="stylesheet" type="text/css" href="/css/layout.css"></link>
+	<link rel="stylesheet" type="text/css" href="/css/style.css"></link>
+	<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<main id="container">
+		<header th:replace="layouts/header :: header"></header>
+	
+	
+		<div class="items">
+			<section th:each = "product: ${productsModel}">
+				<a th:href ="@{/product(id=${product.id})}" th:text = "${product.productName}"></a>
+			</section>
+		</div>
+	
+	
+		
+		<div class="add">
+			<form class="hide" th:action="@{/add-product}" method="POST" enctype="multipart/form-data">
+				<section>
+					<input class="itemNameInput" type="text" name="productName" placeholder="Item Name" />
+				</section>
+				
+				<section>
+					<input class="itemNameInput" type="text" name="productDescription" placeholder="Item Description" />
+				</section>
+		
+				<section>
+					<input type="file" class="itemImageInput"  name="imageFile" />
+				</section>
+		
+				<section>
+					<button class="submit">Submit</button>
+				</section>
+			</form> 
+		</div>
+		
+	</main>
+		<footer th:replace="layouts/footer :: footer">&copy; </footer>
+	<script src = "./js/header.js"></script>
+</body>
+	
+</html>
