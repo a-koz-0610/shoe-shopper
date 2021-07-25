@@ -9,6 +9,7 @@ An application that demonstrates Spring's basic authentication/authorization cap
 - Thymeleaf Layouts
 - Thymeleaf Security Extras
 - TDD
+- Photo Uploads
 
 ## Instructions for use
 
